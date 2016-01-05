@@ -1,1 +1,2 @@
 funcparserlib==0.3.6
+typing==3.5.0.1
