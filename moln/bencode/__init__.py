@@ -2,24 +2,13 @@ import re
 import logging
 import typing
 
-
 from moln.lexer import Token, LexerError
 
 from moln.bencode.tokens import tokenize, decode_tokens
 
+from moln.bencode.errors import DecodeError, EncodeError
+
 _log = logging.getLogger(__name__)
-
-
-class BencodeError(Exception):
-    pass
-
-
-class DecodeError(BencodeError):
-    pass
-
-
-class EncodeError(BencodeError):
-    pass
 
 
 def decode_bytes(_bytes: bytes) -> typing.Any:
